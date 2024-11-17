@@ -12,8 +12,8 @@ jobs:
     name: Executando o job de Teste
     runs-on: self-hosted
     steps:
-      - name : Checkout code
-      - uses: actions/checkout@v2
+    - name : Checkout code
+      uses: actions/checkout@v2
       
-      - name: Executando um comando simples
-        run: echo "Olá mundo, este é o meu segundo job no Github Actions"
+    - name: Executando um comando simples
+      run: echo "Olá mundo, este é o meu segundo job no Github Actions"
