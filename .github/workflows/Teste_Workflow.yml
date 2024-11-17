@@ -1,0 +1,19 @@
+# Definindo o nome do Worlflow
+name: Test Workflow
+
+# Definindo quando o workflow será disparado
+on:
+  push:
+    branches: [ "main", "developer" ]
+  
+# Definindo os jobs que o worflow executará
+jobs:
+  test_job:
+    name: Executando o job de Teste
+    runs-on: self-hosted
+    steps:
+      - name : Checkout code
+      - uses: actions/checkout@v2
+      
+      - name: Executando um comando simples
+        run: echo "Olá mundo, este é o meu segundo job no Github Actions"
